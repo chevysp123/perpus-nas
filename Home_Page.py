@@ -10,7 +10,7 @@ st.title("📚Selamat Datang Di Perpustakaan Nasional")
 st.write("Berikut ini adalah daftar buku yang tersedia di perpustakaan kami")
 
 # Memuat gambar
-image = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/1.jpg')
+image = Image.open('assets/image/1.jpg')
 image1 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/2.jpg')
 image2 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/3.jpg')
 image3 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/4.jpg')
