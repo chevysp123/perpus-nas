@@ -11,15 +11,7 @@ st.write("Berikut ini adalah daftar buku yang tersedia di perpustakaan kami")
 
 # Memuat gambar
 image = Image.open('assets/image/1.jpg')
-image1 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/2.jpg')
-image2 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/3.jpg')
-image3 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/4.jpg')
-image4 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/5.jpg')
-image5 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/6.jpg')
-image6 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/7.jpg')
-image7 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/8.jpg')
-image8 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/9.jpg')
-image9 = Image.open('C:/Kuliah SI/Perpustakaan/assets/image/10.jpg')
+image1= Image.open('assets/image/2.jpg')
 
 # Deskripsi singkat buku
 deskripsi_buku = {
