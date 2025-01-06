@@ -46,6 +46,7 @@ with form2:
         #Menampilkan Hasil
         if submitted: 
             id = int(nama.split(" - ")[0]) 
+            st.write(id)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             peminjam = [item for item in peminjam if id not in item]
             if(denda == 0):
