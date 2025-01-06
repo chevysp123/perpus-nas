@@ -53,11 +53,11 @@ for col in row1 + row2 + row3 + row4:
     # tile = col.container(height=120)
     # tile.title(":balloon:")
     
-    with col.container(height=120):
+    with col:
         st.image(Image.open(buku[i][0]), width=200)
-        st.write("Tersedia 1 Buku")
-        # if st.button("Detail Buku 1"):
-        #     st.write(deskripsi_buku["1"])
+        st.write("Tersedia " + str(buku[i][1]) + " Buku")
+        if st.button("Detail Buku " + str(i + 1)):
+            st.write(deskripsi_buku["1"])
     i += 1
 # for index, item in enumerate(buku):
 #     if index <= 3:
