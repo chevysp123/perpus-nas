@@ -4,6 +4,7 @@ import streamlit as st
 # from Array_Peminjam import peminjam
 # from Array_Peminjam import key_peminjam
 import Array_Peminjam
+import Array_Buku
 import importlib
 
 #Konfigurasi Halaman Streamlit
@@ -48,14 +49,17 @@ with form2:
         #Menampilkan Hasil
         if submitted: 
             id = str(nama.split(" - ")[0]) 
+            buku = str(nama.split(" - ")[2]) 
             st.write(id)
             st.write(Array_Peminjam.peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             # peminjam.remove(0)
             # Array_Peminjam.peminjam = [sublist for sublist in Array_Peminjam.peminjam if not any(id in item for item in sublist)]
             index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
-            Array_Peminjam.peminjam.pop(0);
-            Array_Peminjam.key_peminjam.pop(0);
+            index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
+            Array_Buku.buku[index_buku][1] += 1
+            Array_Peminjam.peminjam.pop(index)
+            Array_Peminjam.key_peminjam.pop(index)
             
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
