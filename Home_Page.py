@@ -6,7 +6,7 @@ from PIL import Image
 st.set_page_config(page_title="Home Page", page_icon="📚", layout="centered")
 
 #Elemen Halaman Streamlit
-st.title("📚Selamat Datang Di Perpustakaan Nasional")
+st.title("📚Selamat Datang Di Perpustakaan Nasional :)")
 st.write("Berikut ini adalah daftar buku yang tersedia di perpustakaan kami")
 
 # Memuat gambar
