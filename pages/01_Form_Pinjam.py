@@ -39,7 +39,7 @@ with form1:
         #Pengiriman Data
         if submitted:
             index = int(judul.split(" - ")[0]) 
-            judul = int(judul.split(" - ")[1]) 
+            judul = str(judul.split(" - ")[1]) 
             buku[index][1] = buku[index][1] - 1
             st.success(judul)
             st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! Jangan lupa simpan struk peminjaman ya")
