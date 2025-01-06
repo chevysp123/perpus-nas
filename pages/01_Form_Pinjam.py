@@ -4,6 +4,7 @@ import sys
 import os
 import streamlit as st
 from Array_Buku import buku
+from Array_Peminjam import peminjam
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Peminjaman Buku", page_icon="📖", layout="centered")
@@ -16,8 +17,8 @@ st.empty()
 st.title("📖 Menu Peminjaman Buku")
 st.write("Silahkan Masukkan Data Diri Anda")
 
-if st.button("pinjem Buku" ):
-    buku[0][1] = buku[0][1] - 1
+# if st.button("pinjem Buku" ):
+#     buku[0][1] = buku[0][1] - 1
 
 # list_buku = []
 # for item, index in enumerate(buku):
@@ -38,10 +39,20 @@ with form1:
         #Pengiriman Data
         if submitted:
             index = int(judul.split(" - ")[0]) 
+            judul = int(judul.split(" - ")[1]) 
             buku[index][1] = buku[index][1] - 1
             st.success(judul)
             st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! Jangan lupa simpan struk peminjaman ya")
             st.balloons()
+            
+            peminjam.append(
+                [
+                    nama,
+                    judul,
+                    tglpinjam,
+                    tglkembali
+                ]
+            )
             
             #Menyimpan Data dan Membuat Struk
             for i in range(1):
