@@ -1,7 +1,7 @@
 #Import Libary
 import streamlit as st
 from PIL import Image
-from pages import buku
+from Arra_buku import buku
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Home Page", page_icon="📚", layout="centered")
@@ -41,6 +41,13 @@ cols = st.columns((1,1,1))
 cols1 = st.columns((1,1,1))
 cols2 = st.columns((1,1,1))
 cols3 = st.columns((1))
+
+for item in buku:
+    with cols[1]:
+        st.image(Image.open(item[0]), width=200)
+        st.write("Tersedia 5 Buku")
+        if st.button("Detail Buku 2"):
+            st.write(deskripsi_buku["2"])
 
 # # Buku 1
 # with cols[0]:
