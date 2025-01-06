@@ -11,4 +11,4 @@ st.title("List Peminjam")
 
 for index, item in enumerate(peminjam):
     # st.write(item[0])
-    st.write(f"{str(index + 1)} - {item[0]} - {item[1]} - tanggal Pinjam : {item[2]} - tanggal Pengembalian : {item[3]} ")
+    st.write(f"{str(index)} - {item[0]} - {item[1]} - tanggal Pinjam : {item[2]} - tanggal Pengembalian : {item[3]} ")
