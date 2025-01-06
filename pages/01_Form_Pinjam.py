@@ -37,6 +37,7 @@ with form1:
         
         #Pengiriman Data
         if submitted:
+            st.success(judul)
             st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! Jangan lupa simpan struk peminjaman ya")
             st.balloons()
             
