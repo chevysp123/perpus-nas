@@ -45,7 +45,7 @@ with form2:
 
         #Menampilkan Hasil
         if submitted: 
-            id = int(nama.split(" - ")[0]) 
+            id = str(nama.split(" - ")[0]) 
             st.write(id)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
