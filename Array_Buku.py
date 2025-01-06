@@ -1,4 +1,4 @@
-buku = '[
+buku = [
     [
         'assets/image/1.jpg'
     ],
@@ -29,4 +29,4 @@ buku = '[
     [
         'assets/image/10.jpg'
     ]
-]'
+]
