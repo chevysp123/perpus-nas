@@ -3,6 +3,7 @@ import datetime
 import streamlit as st
 from Array_Peminjam import peminjam
 from Array_Peminjam import key_peminjam
+import importlib
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Pengembalian Buku", page_icon="📄", layout="centered")
@@ -50,6 +51,7 @@ with form2:
             st.write(peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             peminjam.remove(0)
+            importlib.reload(peminjam)
             # peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
             
             if(denda == 0):
