@@ -1,8 +1,9 @@
 #Import Libary
 import datetime
 import streamlit as st
-from Array_Peminjam import peminjam
-from Array_Peminjam import key_peminjam
+# from Array_Peminjam import peminjam
+# from Array_Peminjam import key_peminjam
+import Array_Peminjam
 import importlib
 
 #Konfigurasi Halaman Streamlit
@@ -20,7 +21,7 @@ st.write("Silahkan Masukkan Data Diri Anda")
 form2 = st.form(key="annotation2",clear_on_submit=True)
 with form2:
         # nama = form2.text_input("Nama Lengkap :")
-        nama = form2.selectbox('Pilih Peminjam',key_peminjam)
+        nama = form2.selectbox('Pilih Peminjam',Array_Peminjam.key_peminjam)
         # judul = form2.selectbox('Pilih Judul Buku',('','As A Man Thinketh by James Allen','The Metamorphosis by Franz Kafka','1984 by George Orwell','Manusia Setengan Salmon by Raditya Dika','Ubur Ubur Lembur by Raditya Dika','Sang Pemimpi by Andrea Hirata','The Little Prince by Antonie De Saint-Exupery','The Laws Of Human Nature by Robert Greene','The Art Of Being Alone by Renuka Gavrani','Steal Like An Artist by Austin Kleon'))
         tglkembali = form2.date_input("Tanggal Deadline Pengembalian :")
         submitted = st.form_submit_button(label="Submit")
@@ -48,11 +49,11 @@ with form2:
         if submitted: 
             id = str(nama.split(" - ")[0]) 
             st.write(id)
-            st.write(peminjam)
+            st.write(Array_Peminjam.peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             # peminjam.remove(0)
-            peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
-            importlib.reload(peminjam)
+            Array_Peminjam.peminjam = [sublist for sublist in Array_Peminjam.peminjam if not any(id in item for item in sublist)]
+            importlib.reload(Array_Peminjam)
             
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
