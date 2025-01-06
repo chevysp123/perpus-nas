@@ -41,6 +41,7 @@ st.write("Berikut ini adalah daftar buku yang tersedia di perpustakaan kami")
 # cols = st.columns((1,1,1))
 # cols1 = st.columns((1,1,1))
 # cols2 = st.columns((1,1,1))
+
 # cols3 = st.columns((1))
 
 row1 = st.columns(3)
