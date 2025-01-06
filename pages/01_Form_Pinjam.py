@@ -48,8 +48,7 @@ with form1:
             st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! Jangan lupa simpan struk peminjaman ya")
             st.balloons()
             
-            now = datetime.now()
-            id = now.strftime("%d%m%y%H%M%S")  # 'ddmmyyhis' format
+            id = time.strftime("%d%m%y%H%M%S")
             
             peminjam.append(
                 [
