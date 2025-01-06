@@ -49,7 +49,7 @@ with form2:
             st.write(id)
             st.write(peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
-            peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
+            peminjam += [sublist for sublist in peminjam if not any(id in item for item in sublist)]
             st.write(peminjam)
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
