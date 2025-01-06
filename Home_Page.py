@@ -43,12 +43,12 @@ cols1 = st.columns((1,1,1))
 cols2 = st.columns((1,1,1))
 cols3 = st.columns((1))
 
-for item in buku:
+for index, item in buku:
     with cols[1]:
         st.image(Image.open(item[0]), width=200)
         st.write("Tersedia 5 Buku")
-        if st.button("Detail Buku 2"):
-            st.write(deskripsi_buku["2"])
+        if st.button("Detail Buku " + (index + 1)):
+            st.write(deskripsi_buku[index + 1])
 
 # # Buku 1
 # with cols[0]:
