@@ -44,8 +44,7 @@ with form1:
             index = int(judul.split(" - ")[0]) 
             judul = str(judul.split(" - ")[1]) 
             buku[index][1] = buku[index][1] - 1
-            st.success(judul)
-            st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! Jangan lupa simpan struk peminjaman ya")
+            st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
             st.balloons()
             
             id = time.strftime("%d%m%y%H%M%S")

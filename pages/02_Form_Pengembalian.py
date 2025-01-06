@@ -50,8 +50,6 @@ with form2:
         if submitted: 
             id = str(nama.split(" - ")[0]) 
             buku = str(nama.split(" - ")[2]) 
-            st.write(id)
-            st.write(Array_Peminjam.peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             # peminjam.remove(0)
             # Array_Peminjam.peminjam = [sublist for sublist in Array_Peminjam.peminjam if not any(id in item for item in sublist)]
