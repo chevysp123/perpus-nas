@@ -57,23 +57,8 @@ for col in row1 + row2 + row3 + row4:
         st.image(Image.open(buku[i][0]), width=200)
         st.write("Tersedia " + str(buku[i][1]) + " Buku")
         if st.button("Detail Buku " + str(i + 1)):
-            st.write(deskripsi_buku["1"])
+            st.write(str(buku[i][2]))
     i += 1
-# for index, item in enumerate(buku):
-#     if index <= 3:
-#         with cols[0]:
-#             st.image(image, width=200)
-#             st.write("Tersedia 1 Buku")
-#             if st.button("Detail Buku 1"):
-#                 st.write(deskripsi_buku["1"])
-#     elif index > 3 and index <= 6 :
-#         colsindex = 2
-#     elif index > 6 and index <= 9 :
-#         colsindex = 3
-#     elif index > 9 and index <= 12 :
-#         colsindex = 4
-#     elif index > 12 and index <= 15 :
-#         colsindex = 5
         
     
         
