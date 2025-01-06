@@ -5,6 +5,7 @@ import os
 import streamlit as st
 from Array_Buku import buku
 from Array_Peminjam import peminjam
+from Array_Peminjam import key_peminjam
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Peminjaman Buku", page_icon="📖", layout="centered")
@@ -53,6 +54,8 @@ with form1:
                     tglkembali
                 ]
             )
+            
+            key_peminjam.append(nama)
             
             #Menyimpan Data dan Membuat Struk
             for i in range(1):
