@@ -49,7 +49,7 @@ with form2:
             st.write(id)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             peminjam2 = peminjam
-            peminjam = [item for item in peminjam2 if id not in item]
+            peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
 
             st.write(peminjam)
             if(denda == 0):
