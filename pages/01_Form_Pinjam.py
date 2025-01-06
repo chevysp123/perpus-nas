@@ -55,7 +55,7 @@ with form1:
                 ]
             )
             
-            key_peminjam.append(nama)
+            key_peminjam.append(nama + " - " + judul)
             
             #Menyimpan Data dan Membuat Struk
             for i in range(1):
