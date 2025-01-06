@@ -3,6 +3,7 @@ import time
 import sys
 import os
 import streamlit as st
+from Array_Buku import buku
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Peminjaman Buku", page_icon="📖", layout="centered")
@@ -14,6 +15,9 @@ arynama,aryjudul,arytglpinjam,arytglkembali = [],[],[],[]
 st.empty()
 st.title("📖 Menu Peminjaman Buku")
 st.write("Silahkan Masukkan Data Diri Anda")
+
+if st.button("pinjem Buku" ):
+    buku[0][1] = buku[0][1] - 1
 
 #Input Form
 form1 = st.form(key="annotation1",clear_on_submit=True)
