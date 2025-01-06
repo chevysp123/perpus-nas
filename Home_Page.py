@@ -43,7 +43,7 @@ cols1 = st.columns((1,1,1))
 cols2 = st.columns((1,1,1))
 cols3 = st.columns((1))
 
-for index, item in buku:
+for index, item in enumerate(buku):
     with cols[1]:
         st.image(Image.open(item[0]), width=200)
         st.write("Tersedia 5 Buku")
