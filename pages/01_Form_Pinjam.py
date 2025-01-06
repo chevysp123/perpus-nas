@@ -21,7 +21,7 @@ if st.button("pinjem Buku" ):
 
 list_buku = []
 for item, index in enumerate(buku):
-    list_buku.append(str(item[index]) + " - " + str(item[3]))
+    list_buku.append(str(item[3]))
 
 #Input Form
 form1 = st.form(key="annotation1",clear_on_submit=True)
