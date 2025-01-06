@@ -48,10 +48,7 @@ with form2:
             id = int(nama.split(" - ")[0]) 
             st.write(id)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
-            peminjam2 = peminjam
             peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
-
-            st.write(peminjam)
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
                 st.balloons()
