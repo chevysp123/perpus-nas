@@ -50,6 +50,8 @@ with form2:
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             peminjam2 = peminjam
             peminjam = [item for item in peminjam2 if id not in item]
+
+            st.write(peminjam)
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
                 st.balloons()
