@@ -1,32 +1,42 @@
 buku = [
     [
-        'assets/image/1.jpg'
+        'assets/image/1.jpg',
+        3
     ],
     [
-        'assets/image/2.jpg'
+        'assets/image/2.jpg',
+        5
     ],
     [
-        'assets/image/3.jpg'
+        'assets/image/3.jpg',
+        8
     ],
     [
-        'assets/image/4.jpg'
+        'assets/image/4.jpg',
+        1
     ],
     [
-        'assets/image/5.jpg'
+        'assets/image/5.jpg',
+        2
     ],
     [
-        'assets/image/6.jpg'
+        'assets/image/6.jpg',
+        10
     ],
     [
-        'assets/image/7.jpg'
+        'assets/image/7.jpg',
+        3
     ],
     [
-        'assets/image/8.jpg'
+        'assets/image/8.jpg',
+        7
     ],
     [
-        'assets/image/9.jpg'
+        'assets/image/9.jpg',
+        6
     ],
     [
-        'assets/image/10.jpg'
+        'assets/image/10.jpg',
+        2
     ]
 ]
