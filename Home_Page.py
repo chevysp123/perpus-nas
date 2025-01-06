@@ -46,13 +46,19 @@ cols3 = st.columns((1))
 row1 = st.columns(3)
 row2 = st.columns(3)
 row3 = st.columns(3)
-row4 = st.columns(3)
+row4 = st.columns(1)
 
-
+i = 0
 for col in row1 + row2 + row3 + row4:
-    tile = col.container(height=120)
-    tile.title(":balloon:")
-
+    # tile = col.container(height=120)
+    # tile.title(":balloon:")
+    
+    with col.container(height=120):
+        st.image(Image.open(buku[i][0]), width=200)
+        st.write("Tersedia 1 Buku")
+        # if st.button("Detail Buku 1"):
+        #     st.write(deskripsi_buku["1"])
+    i += 1
 # for index, item in enumerate(buku):
 #     if index <= 3:
 #         with cols[0]:
