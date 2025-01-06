@@ -1,7 +1,7 @@
 #Import Libary
 import streamlit as st
 from PIL import Image
-from Arra_buku import buku
+# from Arra_buku import buku
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Home Page", page_icon="📚", layout="centered")
