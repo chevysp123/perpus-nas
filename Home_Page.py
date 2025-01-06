@@ -44,21 +44,21 @@ cols2 = st.columns((1,1,1))
 cols3 = st.columns((1))
 
 for index, item in enumerate(buku):
-    if index <= 3:
-        colsindex = 1
-    elif index > 3 and index <= 6 :
-        colsindex = 2
-    elif index > 6 and index <= 9 :
-        colsindex = 3
-    elif index > 9 and index <= 12 :
-        colsindex = 4
-    elif index > 12 and index <= 15 :
-        colsindex = 5
+    # if index <= 3:
+    #     cols = st.columns((1,1,1))
+    # elif index > 3 and index <= 6 :
+    #     colsindex = 2
+    # elif index > 6 and index <= 9 :
+    #     colsindex = 3
+    # elif index > 9 and index <= 12 :
+    #     colsindex = 4
+    # elif index > 12 and index <= 15 :
+    #     colsindex = 5
         
     if (index + 1) % 3 != 0:
-        with cols[colsindex]:
+        with st.columns[1]:
             st.image(Image.open(item[0]), width=200)
-            st.write("Tersedia " + str(item[1]) + " Buku")
+            st.write("Tersedia " + str(item) + " Buku")
             if st.button("Detail Buku " + str((index + 1))):
                 st.write(deskripsi_buku[index + 1])
 
