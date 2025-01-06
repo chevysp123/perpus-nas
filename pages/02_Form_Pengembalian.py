@@ -55,6 +55,7 @@ with form2:
             # Array_Peminjam.peminjam = [sublist for sublist in Array_Peminjam.peminjam if not any(id in item for item in sublist)]
             index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
             Array_Peminjam.peminjam.pop(0);
+            Array_Peminjam.key_peminjam.pop(0);
             
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
