@@ -12,36 +12,36 @@ st.title("📚Selamat Datang Di Perpustakaan Nasional.")
 st.write("Berikut ini adalah daftar buku yang tersedia di perpustakaan kami")
 
 # Memuat gambar
-image = Image.open('assets/image/1.jpg')
-image1= Image.open('assets/image/2.jpg')
-image2 = Image.open('assets/image/3.jpg')
-image3 = Image.open('assets/image/4.jpg')
-image4 = Image.open('assets/image/5.jpg')
-image5 = Image.open('assets/image/6.jpg')
-image6 = Image.open('assets/image/7.jpg')
-image7 = Image.open('assets/image/8.jpg')
-image8 = Image.open('assets/image/9.jpg')
-image9 = Image.open('assets/image/10.jpg')
+# image = Image.open('assets/image/1.jpg')
+# image1= Image.open('assets/image/2.jpg')
+# image2 = Image.open('assets/image/3.jpg')
+# image3 = Image.open('assets/image/4.jpg')
+# image4 = Image.open('assets/image/5.jpg')
+# image5 = Image.open('assets/image/6.jpg')
+# image6 = Image.open('assets/image/7.jpg')
+# image7 = Image.open('assets/image/8.jpg')
+# image8 = Image.open('assets/image/9.jpg')
+# image9 = Image.open('assets/image/10.jpg')
 
-# Deskripsi singkat buku
-deskripsi_buku = {
-    "1": "As A Man Thinketh: Buku karya James Allen ini menjelaskan bahwa pikiran manusia memiliki kekuatan besar dalam membentuk kehidupan. Dengan pola pikir yang positif dan terarah, seseorang dapat mencapai kesuksesan dan kebahagiaan.",
-    "2": "The Metamorphosis: Karya Franz Kafka ini bercerita tentang Gregor Samsa, seorang pria yang tiba-tiba berubah menjadi serangga raksasa. Novel ini mengeksplorasi tema alienasi, tekanan keluarga, dan perjuangan eksistensial.",
-    "3": "1984: Novel karya George Orwell ini menggambarkan dunia distopia di bawah rezim totaliter. Dengan tema pengawasan ketat, manipulasi informasi, dan kehilangan kebebasan individu, 1984 menjadi peringatan akan bahaya otoritarianisme.",
-    "4": "Manusia Setengan Salmon: Ditulis oleh Raditya Dika, buku ini berisi kumpulan cerita humor yang mengangkat tema kehidupan sehari-hari, mulai dari hubungan keluarga hingga pengalaman pribadi yang menggelitik.",
-    "5": "Ubur Ubur Lembur: Karya Raditya Dika lainnya, buku ini menggabungkan humor dan refleksi tentang kehidupan, cinta, dan bagaimana seseorang menghadapi berbagai tantangan dengan cara yang jenaka.",
-    "6": "Sang Pemimpi: Buku kedua dalam trilogi Laskar Pelangi karya Andrea Hirata ini menceritakan kisah Ikal dan teman-temannya yang penuh mimpi besar meski berasal dari lingkungan sederhana. Buku ini menginspirasi pembaca untuk tidak pernah berhenti bermimpi.",
-    "7": "The Little Prince: Buku karya Antoine de Saint-Exupéry ini adalah dongeng filosofis tentang seorang pangeran kecil yang menjelajahi berbagai planet. Buku ini mengajarkan nilai kehidupan, cinta, dan persahabatan melalui perspektif yang sederhana namun mendalam.",
-    "8": "The Laws Of Human Nature: Robert Greene menjelaskan 48 hukum alamiah yang mendasari perilaku manusia. Buku ini membantu pembaca memahami diri sendiri dan orang lain, serta memberikan wawasan untuk menghadapi dinamika sosial.",
-    "9": "The Art Of Being Alone: Buku ini mengeksplorasi seni menikmati kesendirian, menemukan kedamaian batin, dan membangun hubungan sehat dengan diri sendiri, sehingga pembaca dapat hidup lebih seimbang dan bahagia.",
-    "10": "Steal Like An Artist: Buku karya Austin Kleon ini menawarkan panduan kreatif untuk menghasilkan karya orisinal dengan cara memanfaatkan ide-ide dari berbagai sumber sebagai inspirasi, bukan plagiarisme."
-}
+# # Deskripsi singkat buku
+# deskripsi_buku = {
+#     "1": "As A Man Thinketh: Buku karya James Allen ini menjelaskan bahwa pikiran manusia memiliki kekuatan besar dalam membentuk kehidupan. Dengan pola pikir yang positif dan terarah, seseorang dapat mencapai kesuksesan dan kebahagiaan.",
+#     "2": "The Metamorphosis: Karya Franz Kafka ini bercerita tentang Gregor Samsa, seorang pria yang tiba-tiba berubah menjadi serangga raksasa. Novel ini mengeksplorasi tema alienasi, tekanan keluarga, dan perjuangan eksistensial.",
+#     "3": "1984: Novel karya George Orwell ini menggambarkan dunia distopia di bawah rezim totaliter. Dengan tema pengawasan ketat, manipulasi informasi, dan kehilangan kebebasan individu, 1984 menjadi peringatan akan bahaya otoritarianisme.",
+#     "4": "Manusia Setengan Salmon: Ditulis oleh Raditya Dika, buku ini berisi kumpulan cerita humor yang mengangkat tema kehidupan sehari-hari, mulai dari hubungan keluarga hingga pengalaman pribadi yang menggelitik.",
+#     "5": "Ubur Ubur Lembur: Karya Raditya Dika lainnya, buku ini menggabungkan humor dan refleksi tentang kehidupan, cinta, dan bagaimana seseorang menghadapi berbagai tantangan dengan cara yang jenaka.",
+#     "6": "Sang Pemimpi: Buku kedua dalam trilogi Laskar Pelangi karya Andrea Hirata ini menceritakan kisah Ikal dan teman-temannya yang penuh mimpi besar meski berasal dari lingkungan sederhana. Buku ini menginspirasi pembaca untuk tidak pernah berhenti bermimpi.",
+#     "7": "The Little Prince: Buku karya Antoine de Saint-Exupéry ini adalah dongeng filosofis tentang seorang pangeran kecil yang menjelajahi berbagai planet. Buku ini mengajarkan nilai kehidupan, cinta, dan persahabatan melalui perspektif yang sederhana namun mendalam.",
+#     "8": "The Laws Of Human Nature: Robert Greene menjelaskan 48 hukum alamiah yang mendasari perilaku manusia. Buku ini membantu pembaca memahami diri sendiri dan orang lain, serta memberikan wawasan untuk menghadapi dinamika sosial.",
+#     "9": "The Art Of Being Alone: Buku ini mengeksplorasi seni menikmati kesendirian, menemukan kedamaian batin, dan membangun hubungan sehat dengan diri sendiri, sehingga pembaca dapat hidup lebih seimbang dan bahagia.",
+#     "10": "Steal Like An Artist: Buku karya Austin Kleon ini menawarkan panduan kreatif untuk menghasilkan karya orisinal dengan cara memanfaatkan ide-ide dari berbagai sumber sebagai inspirasi, bukan plagiarisme."
+# }
 
 # Membuat kolom untuk menampilkan cover buku
-cols = st.columns((1,1,1))
-cols1 = st.columns((1,1,1))
-cols2 = st.columns((1,1,1))
-cols3 = st.columns((1))
+# cols = st.columns((1,1,1))
+# cols1 = st.columns((1,1,1))
+# cols2 = st.columns((1,1,1))
+# cols3 = st.columns((1))
 
 row1 = st.columns(3)
 row2 = st.columns(3)
