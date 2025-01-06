@@ -1,6 +1,7 @@
 #Import Libary
 import datetime
 import streamlit as st
+from Array_Peminjam import peminjam
 from Array_Peminjam import key_peminjam
 
 #Konfigurasi Halaman Streamlit
@@ -44,6 +45,9 @@ with form2:
 
         #Menampilkan Hasil
         if submitted: 
+            id = int(nama.split(" - ")[0]) 
+            # my_list = ['Harun al', 'A25325 - asfsafasf']
+            peminjam = [item for item in peminjam if id not in item]
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
                 st.balloons()
