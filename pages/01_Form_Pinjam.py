@@ -55,8 +55,8 @@ with form1:
                     id,
                     nama,
                     judul,
-                    tglpinjam,
-                    tglkembali
+                    tglpinjam.strftime("%Y-%m-%d"),
+                    tglkembali.strftime("%Y-%m-%d")
                 ]
             )
             
