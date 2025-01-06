@@ -47,6 +47,7 @@ with form2:
         if submitted: 
             id = str(nama.split(" - ")[0]) 
             st.write(id)
+            st.write(peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
             if(denda == 0):
