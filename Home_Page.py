@@ -47,7 +47,7 @@ for index, item in enumerate(buku):
     with cols[1]:
         st.image(Image.open(item[0]), width=200)
         st.write("Tersedia 5 Buku")
-        if st.button("Detail Buku " + (index + 1)):
+        if st.button("Detail Buku " + str((index + 1))):
             st.write(deskripsi_buku[index + 1])
 
 # # Buku 1
