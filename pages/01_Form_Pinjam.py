@@ -6,6 +6,8 @@ import streamlit as st
 from Array_Buku import buku
 from Array_Peminjam import peminjam
 from Array_Peminjam import key_peminjam
+import datetime
+
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Peminjaman Buku", page_icon="📖", layout="centered")
@@ -46,8 +48,12 @@ with form1:
             st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! Jangan lupa simpan struk peminjaman ya")
             st.balloons()
             
+            now = datetime.now()
+            id = now.strftime("%d%m%y%H%M%S")  # 'ddmmyyhis' format
+            
             peminjam.append(
                 [
+                    id,
                     nama,
                     judul,
                     tglpinjam,
@@ -55,7 +61,7 @@ with form1:
                 ]
             )
             
-            key_peminjam.append(nama + " - " + judul)
+            key_peminjam.append( id + ' - ' + nama + " - " + judul)
             
             #Menyimpan Data dan Membuat Struk
             for i in range(1):
