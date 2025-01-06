@@ -9,6 +9,6 @@ st.set_page_config(page_title="Menu List Peminjam", layout="centered")
 st.title("List Peminjam")
 
 
-for item, index in enumerate(peminjam):
-    st.write(item[0])
-    # st.write(f"{(index + 1)} {item[0]} - {item[1]} - tanggal Pinjam : {item[2]} - tanggal Pengembalian : {item[3]} ")
+for index, item in enumerate(peminjam):
+    # st.write(item[0])
+    st.write(f"{str(index + 1)} {item[0]} - {item[1]} - tanggal Pinjam : {item[2]} - tanggal Pengembalian : {item[3]} ")
