@@ -53,7 +53,7 @@ with form2:
             # my_list = ['Harun al', 'A25325 - asfsafasf']
             # peminjam.remove(0)
             Array_Peminjam.peminjam = [sublist for sublist in Array_Peminjam.peminjam if not any(id in item for item in sublist)]
-            importlib.reload(Array_Peminjam)
+            importlib.reload(Array_Peminjam.peminjam)
             
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
