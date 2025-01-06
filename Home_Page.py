@@ -1,6 +1,7 @@
 #Import Libary
 import streamlit as st
 from PIL import Image
+from pages import buku
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Home Page", page_icon="📚", layout="centered")
@@ -41,72 +42,72 @@ cols1 = st.columns((1,1,1))
 cols2 = st.columns((1,1,1))
 cols3 = st.columns((1))
 
-# Buku 1
-with cols[0]:
-    st.image(image, width=200)
-    st.write("Tersedia 1 Buku")
-    if st.button("Detail Buku 1"):
-        st.write(deskripsi_buku["1"])
+# # Buku 1
+# with cols[0]:
+#     st.image(image, width=200)
+#     st.write("Tersedia 1 Buku")
+#     if st.button("Detail Buku 1"):
+#         st.write(deskripsi_buku["1"])
 
-# Buku 2
-with cols[1]:
-    st.image(image1, width=200)
-    st.write("Tersedia 5 Buku")
-    if st.button("Detail Buku 2"):
-        st.write(deskripsi_buku["2"])
+# # Buku 2
+# with cols[1]:
+#     st.image(image1, width=200)
+#     st.write("Tersedia 5 Buku")
+#     if st.button("Detail Buku 2"):
+#         st.write(deskripsi_buku["2"])
 
-# Buku 3
-with cols[2]:
-    st.image(image2, width=200)
-    st.write("Tersedia 0 Buku")
-    if st.button("Detail Buku 3"):
-        st.write(deskripsi_buku["3"])
+# # Buku 3
+# with cols[2]:
+#     st.image(image2, width=200)
+#     st.write("Tersedia 0 Buku")
+#     if st.button("Detail Buku 3"):
+#         st.write(deskripsi_buku["3"])
 
-# Buku 4
-with cols1[0]:
-    st.image(image3, width=200)
-    st.write("Tersedia 3 Buku")
-    if st.button("Detail Buku 4"):
-        st.write(deskripsi_buku["4"])
+# # Buku 4
+# with cols1[0]:
+#     st.image(image3, width=200)
+#     st.write("Tersedia 3 Buku")
+#     if st.button("Detail Buku 4"):
+#         st.write(deskripsi_buku["4"])
         
-# Buku 5
-with cols1[1]:
-    st.image(image4, width=200)
-    st.write("Tersedia 4 Buku")
-    if st.button("Detail Buku 5"):
-        st.write(deskripsi_buku["5"])
+# # Buku 5
+# with cols1[1]:
+#     st.image(image4, width=200)
+#     st.write("Tersedia 4 Buku")
+#     if st.button("Detail Buku 5"):
+#         st.write(deskripsi_buku["5"])
         
-# Buku 6
-with cols1[2]:
-    st.image(image5, width=200)
-    st.write("Tersedia 1 Buku")
-    if st.button("Detail Buku 6"):
-        st.write(deskripsi_buku["6"])
+# # Buku 6
+# with cols1[2]:
+#     st.image(image5, width=200)
+#     st.write("Tersedia 1 Buku")
+#     if st.button("Detail Buku 6"):
+#         st.write(deskripsi_buku["6"])
         
-# Buku 7
-with cols2[0]:
-    st.image(image6, width=200)
-    st.write("Tersedia 0 Buku")
-    if st.button("Detail Buku 7"):
-        st.write(deskripsi_buku["7"])
+# # Buku 7
+# with cols2[0]:
+#     st.image(image6, width=200)
+#     st.write("Tersedia 0 Buku")
+#     if st.button("Detail Buku 7"):
+#         st.write(deskripsi_buku["7"])
         
-# Buku 8
-with cols2[1]:
-    st.image(image7, width=200)
-    st.write("Tersedia 2 Buku")
-    if st.button("Detail Buku 8"):
-        st.write(deskripsi_buku["8"])
+# # Buku 8
+# with cols2[1]:
+#     st.image(image7, width=200)
+#     st.write("Tersedia 2 Buku")
+#     if st.button("Detail Buku 8"):
+#         st.write(deskripsi_buku["8"])
        
-# Buku 9
-with cols2[2]:
-    st.image(image8, width=200)
-    st.write("Tersedia 1 Buku")
-    if st.button("Detail Buku 9"):
-        st.write(deskripsi_buku["9"])
+# # Buku 9
+# with cols2[2]:
+#     st.image(image8, width=200)
+#     st.write("Tersedia 1 Buku")
+#     if st.button("Detail Buku 9"):
+#         st.write(deskripsi_buku["9"])
 
-# Buku 10
-with cols3[0]:
-    st.image(image9, width=200)
-    st.write("Tersedia 2 Buku")
-    if st.button("Detail Buku 10"):
-        st.write(deskripsi_buku["10"])
+# # Buku 10
+# with cols3[0]:
+#     st.image(image9, width=200)
+#     st.write("Tersedia 2 Buku")
+#     if st.button("Detail Buku 10"):
+#         st.write(deskripsi_buku["10"])
