@@ -50,9 +50,9 @@ with form2:
             st.write(id)
             st.write(peminjam)
             # my_list = ['Harun al', 'A25325 - asfsafasf']
-            peminjam.remove(0)
+            # peminjam.remove(0)
+            peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
             importlib.reload(peminjam)
-            # peminjam = [sublist for sublist in peminjam if not any(id in item for item in sublist)]
             
             if(denda == 0):
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
