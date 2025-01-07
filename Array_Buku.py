@@ -33,21 +33,6 @@ buku = [
         3,
         "The Little Prince: Buku karya Antoine de Saint-Exupéry ini adalah dongeng filosofis tentang seorang pangeran kecil yang menjelajahi berbagai planet. Buku ini mengajarkan nilai kehidupan, cinta, dan persahabatan melalui perspektif yang sederhana namun mendalam.",
         'The Little Prince by Antonie De Saint-Exupery'
-    ],
-    [   'assets/image/8.jpg',
-        7,
-        "The Laws Of Human Nature: Robert Greene menjelaskan 48 hukum alamiah yang mendasari perilaku manusia. Buku ini membantu pembaca memahami diri sendiri dan orang lain, serta memberikan wawasan untuk menghadapi dinamika sosial.",
-        'The Laws Of Human Nature by Robert Greene'
-    ],
-    [   'assets/image/9.jpg',
-        6,
-        "The Art Of Being Alone: Buku ini mengeksplorasi seni menikmati kesendirian, menemukan kedamaian batin, dan membangun hubungan sehat dengan diri sendiri, sehingga pembaca dapat hidup lebih seimbang dan bahagia.",
-        'The Art Of Being Alone by Renuka Gavrani'
-    ],
-    [   'assets/image/10.jpg',
-        2,
-        "Steal Like An Artist: Buku karya Austin Kleon ini menawarkan panduan kreatif untuk menghasilkan karya orisinal dengan cara memanfaatkan ide-ide dari berbagai sumber sebagai inspirasi, bukan plagiarisme.",
-        'Steal Like An Artist by Austin Kleo'
     ]
 ]
 
