@@ -10,8 +10,6 @@ import datetime
 # import qrcode
 from PIL import Image
 
-
-
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Peminjaman Buku", page_icon="📖", layout="centered")
 
