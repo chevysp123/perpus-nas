@@ -7,7 +7,7 @@ from Array_Buku import buku
 from Array_Peminjam import peminjam
 from Array_Peminjam import key_peminjam
 import datetime
-# import qrcode
+import qrcode
 from PIL import Image
 
 
