@@ -7,6 +7,8 @@ from Array_Buku import buku
 from Array_Peminjam import peminjam
 from Array_Peminjam import key_peminjam
 import datetime
+import qrcode
+from PIL import Image
 
 
 #Konfigurasi Halaman Streamlit
@@ -67,6 +69,22 @@ with form1:
                 #Menyimpan Data dan Membuat Struk
                 for i in range(1):
                     arynama.append(nama)
+                    # Generate QR code
+                    qr = qrcode.QRCode(
+                        version=1,
+                        error_correction=qrcode.constants.ERROR_CORRECT_L,
+                        box_size=10,
+                        border=4,
+                    )
+                    qr.add_data(id + ' - ' + nama + " - " + judul)
+                    qr.make(fit=True)
+
+                    img = qr.make_image(fill='black', back_color='white')
+                    img_path = "qr-"+nama+"-"+str(tglpinjam)+".png"
+                    img.save(img_path)
+
+                    # Display QR code in Streamlit
+                    st.image(img_path, caption='Scan QR Code for Details')
                     aryjudul.append(judul)
                     arytglpinjam.append(tglpinjam)
                     arytglkembali.append(tglkembali)
