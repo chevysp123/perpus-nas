@@ -45,49 +45,48 @@ with form1:
             judul = str(judul.split(" - ")[1]) 
             if buku[index][1] == 0:
                 st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
-                st.stop()
-                    else:
-                    buku[index][1] = buku[index][1] - 1
-                    st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
-                    st.balloons()
-                    
-                    id = time.strftime("%d%m%y%H%M%S")
-                    
-                    peminjam.append(
-                        [
-                            id,
-                            nama,
-                            judul,
-                            tglpinjam.strftime("%Y-%m-%d"),
-                            tglkembali.strftime("%Y-%m-%d")
-                        ]
-                    )
-                    
-                    key_peminjam.append( id + ' - ' + nama + " - " + judul)
-                    
-                    #Menyimpan Data dan Membuat Struk
-                    for i in range(1):
-                        arynama.append(nama)
-                        aryjudul.append(judul)
-                        arytglpinjam.append(tglpinjam)
-                        arytglkembali.append(tglkembali)
-                        #Membuat File Struk
-                        sys.stdout = open("struk-"+nama+"-"+str(tglpinjam)+".txt", "w")
-                        print('''
-                            ************************  PERPUS NASIONAL  ************************
-                            ************ Sistem Peminjaman Buku Perpustakaan Digital ************
-                            ************************ Struk Bukti Pinjam *************************
-                            ''')
-                        print('\t\t\tTanggal : ',tglpinjam)
-                        print("\t\t\tNama Peminjam Buku : ",nama)
-                        print("\t\t\tJudul Buku : ",judul)
-                        print("\t\t\tTanggal Peminjaman : ",tglpinjam)
-                        print("\t\t\tTanggal Kembali : ",tglkembali)
-                        print('''
-                                    ---Terima Kasih Telah Meminjam Buku Ditempat Kami---
-                                    ---Struk Harap Dibawa pada saat pengembalian Buku---
-                            ''')
-                        sys.stdout.close()
-                        sys.stdout = sys.__stdout__
-                        time.sleep(1) #Fungsi Tambahan
-                        os.system("struk-"+nama+"-"+str(tglpinjam)+".txt") #Membuka File Struk
+            else:
+                buku[index][1] = buku[index][1] - 1
+                st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
+                st.balloons()
+                
+                id = time.strftime("%d%m%y%H%M%S")
+                
+                peminjam.append(
+                    [
+                        id,
+                        nama,
+                        judul,
+                        tglpinjam.strftime("%Y-%m-%d"),
+                        tglkembali.strftime("%Y-%m-%d")
+                    ]
+                )
+                
+                key_peminjam.append( id + ' - ' + nama + " - " + judul)
+                
+                #Menyimpan Data dan Membuat Struk
+                for i in range(1):
+                    arynama.append(nama)
+                    aryjudul.append(judul)
+                    arytglpinjam.append(tglpinjam)
+                    arytglkembali.append(tglkembali)
+                    #Membuat File Struk
+                    sys.stdout = open("struk-"+nama+"-"+str(tglpinjam)+".txt", "w")
+                    print('''
+                        ************************  PERPUS NASIONAL  ************************
+                        ************ Sistem Peminjaman Buku Perpustakaan Digital ************
+                        ************************ Struk Bukti Pinjam *************************
+                        ''')
+                    print('\t\t\tTanggal : ',tglpinjam)
+                    print("\t\t\tNama Peminjam Buku : ",nama)
+                    print("\t\t\tJudul Buku : ",judul)
+                    print("\t\t\tTanggal Peminjaman : ",tglpinjam)
+                    print("\t\t\tTanggal Kembali : ",tglkembali)
+                    print('''
+                                ---Terima Kasih Telah Meminjam Buku Ditempat Kami---
+                                ---Struk Harap Dibawa pada saat pengembalian Buku---
+                        ''')
+                    sys.stdout.close()
+                    sys.stdout = sys.__stdout__
+                    time.sleep(1) #Fungsi Tambahan
+                    os.system("struk-"+nama+"-"+str(tglpinjam)+".txt") #Membuka File Struk
