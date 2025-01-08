@@ -67,21 +67,21 @@ with form1:
                 
                 key_peminjam.append( id + ' - ' + nama + " - " + judul)
                 # Generate QR code
-                qr = qrcode.QRCode(
-                    version=1,
-                    error_correction=qrcode.constants.ERROR_CORRECT_L,
-                    box_size=10,
-                    border=4,
-                )
-                qr.add_data(id + ' - ' + nama + " - " + judul)
-                qr.make(fit=True)
+                # qr = qrcode.QRCode(
+                #     version=1,
+                #     error_correction=qrcode.constants.ERROR_CORRECT_L,
+                #     box_size=10,
+                #     border=4,
+                # )
+                # qr.add_data(id + ' - ' + nama + " - " + judul)
+                # qr.make(fit=True)
 
-                img = qr.make_image(fill='black', back_color='white')
-                img_path = "qrcode-" + id + ".png"
-                img.save(img_path)
+                # img = qr.make_image(fill='black', back_color='white')
+                # img_path = "qrcode-" + id + ".png"
+                # img.save(img_path)
 
                 # Display QR code in Streamlit
-                st.image(img_path, caption="QR Code Peminjaman Buku")
+                # st.image(img_path, caption="QR Code Peminjaman Buku")
                 
                 # Menyimpan Data dan Membuat Struk
                 for i in range(1):
