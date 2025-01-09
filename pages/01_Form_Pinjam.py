@@ -83,10 +83,7 @@ with form1:
                 qr_col1, qr_col2, qr_col3 = st.columns([1, 2, 1])
                 with qr_col2:
                     st.image(img_path, caption="QR Code Peminjaman Buku")
-                    
-                # Display QR code in Streamlit
-                st.image(img_path, caption="QR Code Peminjaman Buku")
-                
+                            
                 # Menyimpan Data dan Membuat Struk
                 for i in range(1):
                     arynama.append(nama)
