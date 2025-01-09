@@ -68,12 +68,6 @@ with form1:
                 
                 key_peminjam.append( id + ' - ' + nama + " - " + judul)
 
-               
-                
-form3 = st.form(key="annotation1",clear_on_submit=False)
-with form3:                
-                                 
-                
                 # Generate QR code
                 qr = qrcode.QRCode(
                     version=1,
