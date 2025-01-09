@@ -49,7 +49,7 @@ with form1:
                 st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
             else:
                 
-                buku[index][1] = buku[index][1] - 1
+                #buku[index][1] = buku[index][1] - 1
                 st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
                 # st.balloons()
                 
