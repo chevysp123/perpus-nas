@@ -36,7 +36,7 @@ form3 = st.form(key="annotation1",clear_on_submit=False)
 with form3:
         nama = form3.text_input("Scan QR Code :")
         # submitted = st.form_submit_button(label="Submit")
-                                
+        submitted = form3.form_submit_button(label=None, on_click=None)                        
         #Pengiriman Data
         if submitted:
             key = nama
@@ -51,7 +51,7 @@ with form3:
                 st.write(f"Tanggal Kembali: {data_peminjam[4]}")
             else:
                 st.error("Data tidak ditemukan.")
-        submitted = form3.form_submit_button(label="Submit", on_click=None)
+        
 
 
 
