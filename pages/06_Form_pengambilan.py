@@ -58,7 +58,7 @@ with form4:
     submitted2 = st.form_submit_button(label="Pinjam Buku")
     if submitted2:
         if 'index' in locals():
-            Array_Buku.buku[index][1] = Array_Buku.buku[index][1] - 1
+            Array_Buku.buku[index][1] - 1
             st.success("Buku berhasil dipinjam.")
         else:
             st.error("Tidak ada data peminjam yang valid.")
