@@ -30,7 +30,7 @@ st.write("Silahkan Masukkan Data Diri Anda")
 #     list_buku.append(str(item[3]))
 
 #Input Form
-form1 = st.form(key="annotation1",clear_on_submit=True)
+form1 = st.form(key="annotation1",clear_on_submit=False,use_container_width=True,enter_to_submit=True)
 with form1:
         cols = st.columns((1,1))
         nama = cols[0].text_input("Nama Lengkap :")
