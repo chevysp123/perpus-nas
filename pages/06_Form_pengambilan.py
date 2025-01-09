@@ -43,20 +43,18 @@ with form3:
                 
         #Pengiriman Data
         if submitted:
-            id = str(nama.split(" - ")[0]) 
-            buku = str(nama.split(" - ")[2]) 
-            index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
-            index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
-            if index is not None:
+            key = nama
+            if key in Array_Peminjam.key_peminjam:
+                index = Array_Peminjam.key_peminjam.index(key)
+                data_peminjam = Array_Peminjam.peminjam[index]
                 st.write("Data Peminjam:")
-                st.write(f"ID: {Array_Peminjam.peminjam[index][0]}")
-                st.write(f"Nama: {Array_Peminjam.peminjam[index][1]}")
-                st.write(f"Judul Buku: {Array_Peminjam.peminjam[index][2]}")
-                st.write(f"Tanggal Pinjam: {Array_Peminjam.peminjam[index][3]}")
-                st.write(f"Tanggal Kembali: {Array_Peminjam.peminjam[index][4]}")
+                st.write(f"ID: {data_peminjam[0]}")
+                st.write(f"Nama: {data_peminjam[1]}")
+                st.write(f"Judul Buku: {data_peminjam[2]}")
+                st.write(f"Tanggal Pinjam: {data_peminjam[3]}")
+                st.write(f"Tanggal Kembali: {data_peminjam[4]}")
             else:
-                st.error("Data peminjam tidak ditemukan.")
-           
+                st.error("Data tidak ditemukan.")
 
 
 
