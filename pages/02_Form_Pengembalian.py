@@ -54,7 +54,7 @@ with form2:
             # Array_Peminjam.peminjam = [sublist for sublist in Array_Peminjam.peminjam if not any(id in item for item in sublist)]
             index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
             index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
-            Array_Buku.buku[index_buku][1] -= 1
+            Array_Buku.buku[index_buku][1] += 1
             Array_Peminjam.peminjam.pop(index)
             Array_Peminjam.key_peminjam.pop(index)
             

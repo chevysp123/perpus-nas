@@ -61,7 +61,7 @@ with form4:
         buku = str(nama.split(" - ")[2]) 
         index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
         index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
-        Array_Buku.buku[index_buku][1] - 1
+        Array_Buku.buku[index_buku][1] -= 1
         st.success("Buku berhasil dipinjam.")
     else:
         st.error(" ")
