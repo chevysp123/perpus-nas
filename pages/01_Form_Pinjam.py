@@ -65,6 +65,7 @@ with form1:
                 )
                 
                 key_peminjam.append( id + ' - ' + nama + " - " + judul)
+                
                 # Generate QR code
                 qr = qrcode.QRCode(
                     version=1,
@@ -74,11 +75,15 @@ with form1:
                 )
                 qr.add_data(id + ' - ' + nama + " - " + judul)
                 qr.make(fit=True)
-
                 img = qr.make_image(fill='black', back_color='white')
                 img_path = "qrcode-" + id + ".png"
                 img.save(img_path)
 
+                # Center the QR code on the page
+                qr_col1, qr_col2, qr_col3 = st.columns([1, 2, 1])
+                with qr_col2:
+                    st.image(img_path, caption="QR Code Peminjaman Buku")
+                    
                 # Display QR code in Streamlit
                 st.image(img_path, caption="QR Code Peminjaman Buku")
                 
