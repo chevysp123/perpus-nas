@@ -48,9 +48,9 @@ with form1:
             if buku[index][1] == 0:
                 st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
             else:
-                st.empty()
-                # buku[index][1] = buku[index][1] - 1
-                # st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
+                
+                buku[index][1] = buku[index][1] - 1
+                st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
                 # st.balloons()
                 
                 id = time.strftime("%d%m%y%H%M%S")
