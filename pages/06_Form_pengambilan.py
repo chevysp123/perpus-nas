@@ -57,10 +57,13 @@ form4 = st.form(key="annotation2", clear_on_submit=False)
 with form4:
     submitted2 = st.form_submit_button(label="Pinjam Buku")
     if submitted2:
-        id = str(nama.split(" - ")[0]) 
-        buku = str(nama.split(" - ")[2])
-        index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
-        index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
-        Array_Buku.buku[index_buku][1] -= 1
-        st.success("Buku berhasil dipinjam.")
+        if 'nama' not in locals():
+            st.error("Silakan scan QR Code terlebih dahulu.")
+        else:
+            id = str(nama.split(" - ")[0]) 
+            buku = str(nama.split(" - ")[2])
+            index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
+            index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
+            Array_Buku.buku[index_buku][1] -= 1
+            st.success("Buku berhasil dipinjam.")
                             
