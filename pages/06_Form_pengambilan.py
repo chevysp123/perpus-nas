@@ -58,10 +58,10 @@ with form4:
     submitted2 = st.form_submit_button(label="Pinjam Buku")
     if submitted2:
         if key in Array_Peminjam.key_peminjam:
-                index = Array_Peminjam.key_peminjam.index(key)
-                data_peminjam = Array_Peminjam.peminjam[index]
-                Array_Buku.buku[index][1] - 1
-                st.success("Buku berhasil dipinjam.")
-            else:
-                st.error("Tidak ada data peminjam yang valid.")
+            index = Array_Peminjam.key_peminjam.index(key)
+            data_peminjam = Array_Peminjam.peminjam[index]
+            Array_Buku.buku[index][1] - 1
+            st.success("Buku berhasil dipinjam.")
+        else:
+            st.error("Tidak ada data peminjam yang valid.")
                                     
