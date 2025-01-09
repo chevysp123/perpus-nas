@@ -53,35 +53,13 @@ with form3:
             else:
                 st.error("Data tidak ditemukan.")
         
-
-
-
-            # index = int(judul.split(" - ")[0]) 
-            # judul = str(judul.split(" - ")[1]) 
-            # if buku[index][1] == 0:
-            #     st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
-            # else:
-                
-            #     ##buku[index][1] = buku[index][1] - 1
-            #     st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
-            #     ## st.balloons()
-                
-            #     id = time.strftime("%d%m%y%H%M%S")
-                
-            #     peminjam.append(
-            #         [
-            #             id,
-            #             nama,
-            #             judul,
-            #             tglpinjam.strftime("%Y-%m-%d"),
-            #             tglkembali.strftime("%Y-%m-%d")
-            #         ]
-            #     )
-                
-            #     key_peminjam.append( id + ' - ' + nama + " - " + judul)
-
-               
-
-
-            #     st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")    
+form4 = st.form(key="annotation2", clear_on_submit=False)
+with form4:
+    submitted2 = st.form_submit_button(label="Pinjam Buku")
+    if submitted2:
+        if 'index' in locals():
+            Array_Buku.buku[index][1] = Array_Buku.buku[index][1] - 1
+            st.success("Buku berhasil dipinjam.")
+        else:
+            st.error("Tidak ada data peminjam yang valid.")
                             
