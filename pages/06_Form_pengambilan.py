@@ -2,11 +2,14 @@ import time
 import sys
 import os
 import streamlit as st
-from Array_Buku import buku
-from Array_Peminjam import peminjam
-from Array_Peminjam import key_peminjam
+# from Array_Buku import buku
+# from Array_Peminjam import peminjam
+# from Array_Peminjam import key_peminjam
 import datetime
-import qrcode
+# import qrcode
+import Array_Peminjam
+import Array_Buku
+import importlib
 from PIL import Image
 
 
@@ -29,12 +32,12 @@ st.write("Silahkan Masukkan Data Diri Anda")
 #     list_buku.append(str(item[3]))
 
 #Input Form
-form1 = st.form(key="annotation1",clear_on_submit=False)
-with form1:
-        nama = form1.text_input("Scan QR Code :")
-        judul = form1.selectbox('Pilih Judul Buku',('','0 - As A Man Thinketh by James Allen','1 - The Metamorphosis by Franz Kafka','2 - 1984 by George Orwell','3 - Manusia Setengan Salmon by Raditya Dika','4 - Ubur Ubur Lembur by Raditya Dika','5 - Sang Pemimpi by Andrea Hirata','6 - The Little Prince by Antonie De Saint-Exupery','7 - The Laws Of Human Nature by Robert Greene','8 - The Art Of Being Alone by Renuka Gavrani','9 - Steal Like An Artist by Austin Kleon'))
-        tglpinjam = value=datetime.date.today()
-        tglkembali = form1.date_input("Tanggal Kembali :")
+form3 = st.form(key="annotation1",clear_on_submit=False)
+with form3:
+        nama = form3.text_input('Scan QR Code :',Array_Peminjam.key_peminjam)
+        # judul = form3.selectbox('Pilih Judul Buku',('','0 - As A Man Thinketh by James Allen','1 - The Metamorphosis by Franz Kafka','2 - 1984 by George Orwell','3 - Manusia Setengan Salmon by Raditya Dika','4 - Ubur Ubur Lembur by Raditya Dika','5 - Sang Pemimpi by Andrea Hirata','6 - The Little Prince by Antonie De Saint-Exupery','7 - The Laws Of Human Nature by Robert Greene','8 - The Art Of Being Alone by Renuka Gavrani','9 - Steal Like An Artist by Austin Kleon'))
+        # tglpinjam = value=datetime.date.today()
+        # tglkembali = form3.date_input("Tanggal Kembali :")
         submitted = st.form_submit_button(label="Submit")
         
                 
