@@ -41,10 +41,7 @@ with form1:
         tglkembali = cols[1].date_input("Tanggal Kembali :")
         submitted = st.form_submit_button(label="Submit")
         
-        if submitted:
-            for col in cols:
-            col.empty()
-        
+                
         #Pengiriman Data
         if submitted:
             index = int(judul.split(" - ")[0]) 
@@ -72,7 +69,9 @@ with form1:
                 key_peminjam.append( id + ' - ' + nama + " - " + judul)
 
                
-               
+        if submitted:
+            for col in cols:
+            col.empty()       
 
                 # Generate QR code
                 qr = qrcode.QRCode(
