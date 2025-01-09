@@ -69,8 +69,5 @@ with form4:
             else:
                 Array_Buku.buku[index_buku][1] -= 1
                 st.success("Buku berhasil dipinjam.")
-                st.session_state['submitted'] = True
-
-if 'submitted' in st.session_state and st.session_state['submitted']:
-    st.warning("Anda sudah meminjam buku. Tidak bisa meminjam lagi.")
-
+               
+               
