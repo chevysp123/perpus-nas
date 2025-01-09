@@ -34,9 +34,10 @@ st.write("Silahkan Masukkan Data Diri Anda")
 #Input Form
 form3 = st.form(key="annotation1",clear_on_submit=False)
 with form3:
+        submitted = st.form_submit_button(label="Scan", on_click=None)  
         nama = form3.text_input("Scan QR Code :")
         # submitted = st.form_submit_button(label="Submit")
-        submitted = st.rerun()               
+                     
         #Pengiriman Data
         if submitted:
             key = nama
