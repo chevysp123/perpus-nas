@@ -64,5 +64,5 @@ with form4:
         Array_Buku.buku[index_buku][1] - 1
         st.success("Buku berhasil dipinjam.")
     else:
-        st.error("Tidak ada data peminjam yang valid.")
+        st.error(" ")
                                     
