@@ -36,7 +36,9 @@ form3 = st.form(key="annotation1",clear_on_submit=False)
 with form3:
         nama = form3.text_input("Scan QR Code :")
         # submitted = st.form_submit_button(label="Submit")
-        submitted = True
+        submitted = form3.form_submit_button(label="Submit", on_click=None)
+        form3.form_submit_button(label="Submit", on_click=None)
+        form3.form_submit_button(label="Submit", on_click=None)
                 
         #Pengiriman Data
         if submitted:
