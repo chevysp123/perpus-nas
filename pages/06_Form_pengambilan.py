@@ -43,48 +43,50 @@ with form3:
                 
         #Pengiriman Data
         if submitted:
-            index = int(judul.split(" - ")[0]) 
-            judul = str(judul.split(" - ")[1]) 
-            if buku[index][1] == 0:
-                st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
+            id = str(nama.split(" - ")[0]) 
+            buku = str(nama.split(" - ")[2]) 
+            index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
+            index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
+            if index is not None:
+                st.write("Data Peminjam:")
+                st.write(f"ID: {Array_Peminjam.peminjam[index][0]}")
+                st.write(f"Nama: {Array_Peminjam.peminjam[index][1]}")
+                st.write(f"Judul Buku: {Array_Peminjam.peminjam[index][2]}")
+                st.write(f"Tanggal Pinjam: {Array_Peminjam.peminjam[index][3]}")
+                st.write(f"Tanggal Kembali: {Array_Peminjam.peminjam[index][4]}")
             else:
-                
-                #buku[index][1] = buku[index][1] - 1
-                st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
-                # st.balloons()
-                
-                id = time.strftime("%d%m%y%H%M%S")
-                
-                peminjam.append(
-                    [
-                        id,
-                        nama,
-                        judul,
-                        tglpinjam.strftime("%Y-%m-%d"),
-                        tglkembali.strftime("%Y-%m-%d")
-                    ]
-                )
-                
-                key_peminjam.append( id + ' - ' + nama + " - " + judul)
-
-                # Generate QR code
-                qr = qrcode.QRCode(
-                    version=1,
-                    error_correction=qrcode.constants.ERROR_CORRECT_L,
-                    box_size=10,
-                    border=4,
-                )
-                qr.add_data(id + ' - ' + nama + " - " + judul)
-                qr.make(fit=True)
-                img = qr.make_image(fill='black', back_color='white')
-                img_path = "qrcode-" + id + ".png"
-                img.save(img_path)
-
-                # Center the QR code on the page
-                qr_col1, qr_col2, qr_col3 = st.columns([1, 2, 1])
-                with qr_col2:
-                    st.image(img_path, caption="QR Code Peminjaman Buku")
+                st.error("Data peminjam tidak ditemukan.")
+           
 
 
-                st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")    
+
+
+            # index = int(judul.split(" - ")[0]) 
+            # judul = str(judul.split(" - ")[1]) 
+            # if buku[index][1] == 0:
+            #     st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
+            # else:
+                
+            #     ##buku[index][1] = buku[index][1] - 1
+            #     st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
+            #     ## st.balloons()
+                
+            #     id = time.strftime("%d%m%y%H%M%S")
+                
+            #     peminjam.append(
+            #         [
+            #             id,
+            #             nama,
+            #             judul,
+            #             tglpinjam.strftime("%Y-%m-%d"),
+            #             tglkembali.strftime("%Y-%m-%d")
+            #         ]
+            #     )
+                
+            #     key_peminjam.append( id + ' - ' + nama + " - " + judul)
+
+               
+
+
+            #     st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")    
                             
