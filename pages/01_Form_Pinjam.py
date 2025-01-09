@@ -66,8 +66,9 @@ with form1:
                 
                 key_peminjam.append( id + ' - ' + nama + " - " + judul)
 
-                form1.empty()
-                
+               
+                st.empty()
+
                 # Generate QR code
                 qr = qrcode.QRCode(
                     version=1,
