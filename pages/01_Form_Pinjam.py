@@ -70,14 +70,9 @@ with form1:
 
                
                 
-                # Form 3
-                form3 = st.form(key="annotation3", clear_on_submit=False)
-                with form3:
-                    nama3 = value=nama
-                    judul3 = value=judul
-                    tglpinjam3 = value=tglpinjam
-                    tglkembali3 = value=tglkembali
-                    
+form3 = st.form(key="annotation1",clear_on_submit=False)
+with form3:                
+                                 
                 
                 # Generate QR code
                 qr = qrcode.QRCode(
