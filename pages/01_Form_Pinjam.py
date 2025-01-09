@@ -69,6 +69,57 @@ with form1:
                 key_peminjam.append( id + ' - ' + nama + " - " + judul)
 
                
+                
+                # Form 3
+                form3 = st.form(key="annotation3", clear_on_submit=False)
+                with form3:
+                    nama3 = form3.text_input("Nama Lengkap (Form 3):")
+                    judul3 = form3.selectbox('Pilih Judul Buku (Form 3)', ('', '0 - As A Man Thinketh by James Allen', '1 - The Metamorphosis by Franz Kafka', '2 - 1984 by George Orwell', '3 - Manusia Setengan Salmon by Raditya Dika', '4 - Ubur Ubur Lembur by Raditya Dika', '5 - Sang Pemimpi by Andrea Hirata', '6 - The Little Prince by Antonie De Saint-Exupery', '7 - The Laws Of Human Nature by Robert Greene', '8 - The Art Of Being Alone by Renuka Gavrani', '9 - Steal Like An Artist by Austin Kleon'))
+                    tglpinjam3 = value = datetime.date.today()
+                    tglkembali3 = form3.date_input("Tanggal Kembali (Form 3):")
+                    submitted3 = st.form_submit_button(label="Submit (Form 3)")
+
+                    if submitted3:
+                        index3 = int(judul3.split(" - ")[0])
+                        judul3 = str(judul3.split(" - ")[1])
+                        if buku[index3][1] == 0:
+                            st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia (Form 3)")
+                        else:
+                            st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! (Form 3)")
+                            id3 = time.strftime("%d%m%y%H%M%S")
+
+                            peminjam.append(
+                                [
+                                    id3,
+                                    nama3,
+                                    judul3,
+                                    tglpinjam3.strftime("%Y-%m-%d"),
+                                    tglkembali3.strftime("%Y-%m-%d")
+                                ]
+                            )
+
+                            key_peminjam.append(id3 + ' - ' + nama3 + " - " + judul3)
+
+                            # Generate QR code for Form 3
+                            qr3 = qrcode.QRCode(
+                                version=1,
+                                error_correction=qrcode.constants.ERROR_CORRECT_L,
+                                box_size=10,
+                                border=4,
+                            )
+                            qr3.add_data(id3 + ' - ' + nama3 + " - " + judul3)
+                            qr3.make(fit=True)
+                            img3 = qr3.make_image(fill='black', back_color='white')
+                            img_path3 = "qrcode-" + id3 + ".png"
+                            img3.save(img_path3)
+
+                            # Center the QR code on the page for Form 3
+                            qr_col1_3, qr_col2_3, qr_col3_3 = st.columns([1, 2, 1])
+                            with qr_col2_3:
+                                st.image(img_path3, caption="QR Code Peminjaman Buku (Form 3)")
+
+                            st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional! (Form 3)")
+                
                 # Generate QR code
                 qr = qrcode.QRCode(
                     version=1,
