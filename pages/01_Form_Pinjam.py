@@ -2,12 +2,12 @@
 import time
 import sys
 import os
-import qrcode
 import streamlit as st
 from Array_Buku import buku
 from Array_Peminjam import peminjam
 from Array_Peminjam import key_peminjam
 import datetime
+# import qrcode
 from PIL import Image
 
 
