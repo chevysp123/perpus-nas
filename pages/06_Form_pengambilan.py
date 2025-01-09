@@ -37,9 +37,7 @@ with form3:
         nama = form3.text_input("Scan QR Code :")
         # submitted = st.form_submit_button(label="Submit")
         submitted = form3.form_submit_button(label="Submit", on_click=None)
-        form3.form_submit_button(label="Submit", on_click=None)
-        form3.form_submit_button(label="Submit", on_click=None)
-                
+                        
         #Pengiriman Data
         if submitted:
             key = nama
