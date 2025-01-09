@@ -59,11 +59,8 @@ with form4:
     if submitted2:
         id = str(nama.split(" - ")[0]) 
         buku = str(nama.split(" - ")[2])
-        if Array_Buku.buku[0][1] == 0:
-            st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
-        else: 
-            index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
-            index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
-            Array_Buku.buku[index_buku][1] -= 1
-            st.success("Buku berhasil dipinjam.")
+        index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
+        index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
+        Array_Buku.buku[index_buku][1] -= 1
+        st.success("Buku berhasil dipinjam.")
                             
