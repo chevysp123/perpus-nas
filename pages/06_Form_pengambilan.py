@@ -55,7 +55,7 @@ with form3:
         
 form4 = st.form(key="annotation2", clear_on_submit=False)
 with form4:
-    submitted2 = st.form_submit_button(label="Pinjam Buku")
+    submitted2 = st.form_submit_button(label="Serahkan Buku")
     if submitted2:
         if 'nama' not in locals() or not nama:
             st.error("Silakan scan QR Code terlebih dahulu.")
