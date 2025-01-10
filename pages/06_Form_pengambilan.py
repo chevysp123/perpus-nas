@@ -50,6 +50,7 @@ with form3:
                 st.write(f"Judul Buku: {data_peminjam[2]}")
                 st.write(f"Tanggal Pinjam: {data_peminjam[3]}")
                 st.write(f"Tanggal Kembali: {data_peminjam[4]}")
+                st.write(f"tersedia: {index_buku][1]}")
             else:
                 st.error("Data tidak ditemukan.")
         
