@@ -36,7 +36,6 @@ with form1:
         #aktif = form1=="0"
         submitted = st.form_submit_button(label="Submit")
         
-                
         #Pengiriman Data
         if submitted:
             index = int(judul.split(" - ")[0]) 
