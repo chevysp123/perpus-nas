@@ -21,7 +21,7 @@ arynama,aryjudul,arytglpinjam,arytglkembali = [],[],[],[]
 
 #Elemen Halaman Streamlit
 st.empty()
-st.title("📖 Menu Pengambilan Buku untuk Admin")
+st.title("📖 Menu Pengambilan Buku ")
 st.write("Silahkan Scan QR Code Peminjam")
 
 # if st.button("pinjem Buku" ):
