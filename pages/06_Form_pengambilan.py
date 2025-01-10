@@ -8,7 +8,7 @@ import streamlit as st
 import datetime
 # import qrcode
 import Array_Peminjam
-import Array_Buku import buku
+import Array_Buku #import buku
 import importlib
 from PIL import Image
 
