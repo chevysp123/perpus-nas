@@ -67,8 +67,8 @@ with form4:
             if index_buku is None or Array_Buku.buku[index_buku][1] == 0:
                 st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia");
             else:
-                if Array_Buku.buku[index_buku][5] == 1:
-                    st.error("QR Code sudah dipakai.")
+                # if Array_Buku.buku[index_buku][5] == 1:
+                #     st.error("QR Code sudah dipakai.")
                 else:
                     Array_Buku.buku[index_buku][5] == 1 
                     Array_Buku.buku[index_buku][1] -= 1
