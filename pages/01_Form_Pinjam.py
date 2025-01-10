@@ -45,7 +45,7 @@ with form1:
             else:
                 
                 #buku[index][1] = buku[index][1] - 1
-                st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")
+                st.success("Silahkan simpan QR Code Peminjaman Buku Anda untuk pengambilan dan penyerahan buku")
                 # st.balloons()
                 
                 id = time.strftime("%d%m%y%H%M%S")
@@ -80,6 +80,7 @@ with form1:
                 qr_col1, qr_col2, qr_col3 = st.columns([1, 2, 1])
                 with qr_col2:
                     st.image(img_path, caption="QR Code Peminjaman Buku")
+                    st.write("ID Peminjaman: " + id)
 
 
                 st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")    
