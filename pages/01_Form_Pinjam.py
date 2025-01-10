@@ -15,7 +15,7 @@ from PIL import Image
 st.set_page_config(page_title="Menu Peminjaman Buku", page_icon="📖", layout="centered")
 
 #Inisialisasi Variabel
-arynama,aryjudul,arytglpinjam,arytglkembali = [],[],[],[]
+arynama,aryjudul,arytglpinjam,arytglkembali,aryaktif = [],[],[],[],[]
 
 #Elemen Halaman Streamlit
 st.empty()
@@ -33,6 +33,7 @@ with form1:
         #cols = st.columns(2)
         tglpinjam = value=datetime.date.today()
         tglkembali = form1.date_input("Tanggal Kembali :")
+        #aktif = form1=="0"
         submitted = st.form_submit_button(label="Submit")
         
                 
@@ -56,7 +57,8 @@ with form1:
                         nama,
                         judul,
                         tglpinjam.strftime("%Y-%m-%d"),
-                        tglkembali.strftime("%Y-%m-%d")
+                        tglkembali.strftime("%Y-%m-%d"),
+                        '0'
                     ]
                 )
                 
