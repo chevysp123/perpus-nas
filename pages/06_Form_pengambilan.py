@@ -72,6 +72,7 @@ with form4:
                 else:
                     Array_Peminjam.peminjam[index][5] == 1 
                     Array_Buku.buku[index_buku][1] -= 1
+                    st.success(Array_Peminjam.peminjam[index][5])
                     st.success("Buku berhasil dipinjam.")
 
 
