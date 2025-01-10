@@ -80,7 +80,7 @@ with form1:
                 qr_col1, qr_col2, qr_col3 = st.columns([1, 2, 1])
                 with qr_col2:
                     st.image(img_path, caption="QR Code Peminjaman Buku")
-                    st.write("ID Peminjaman: " + id)
+                    st.write("ID Peminjaman: ", id + ' - ' + nama + " - " + judul)
 
 
                 st.success("Terimakasih sudah meminjam buku di perpustakaan Nasional!")    
