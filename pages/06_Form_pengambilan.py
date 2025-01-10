@@ -64,7 +64,7 @@ with form4:
             buku = str(nama.split(" - ")[2])
             index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
             index_buku = next((i for i, sublist in enumerate(Array_Buku.buku) if buku in sublist), None)
-            if index_buku is None or Array_Buku.buku[index_buku][1] == 0:
+            if Array_Buku.buku[index_buku][1] == 0:
                 st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia");
             else:
                 if Array_Buku.buku[index_buku][5] == 1:
