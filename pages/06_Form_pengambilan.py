@@ -53,7 +53,7 @@ with form3:
                 st.write(f"Tersedia: {Array_Buku.buku[index][1]}")
                 image_path = Array_Buku.buku[index][0]
                 image = Image.open(image_path)
-                image = image.resize((300, 400)) 
+                image = image.resize((30, 40)) 
                 st.image(image, caption="Gambar Buku", use_column_width=True)
             else:
                 st.error("Data tidak ditemukan.")
