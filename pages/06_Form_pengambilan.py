@@ -8,7 +8,7 @@ import streamlit as st
 import datetime
 # import qrcode
 import Array_Peminjam
-import Array_Buku
+import Array_Buku import buku
 import importlib
 from PIL import Image
 
@@ -50,7 +50,7 @@ with form3:
                 st.write(f"Judul Buku: {data_peminjam[2]}")
                 st.write(f"Tanggal Pinjam: {data_peminjam[3]}")
                 st.write(f"Tanggal Kembali: {data_peminjam[4]}")
-                st.write(f"tersedia: {index_buku][1]}")
+                st.write(f"tersedia: {index_buku[1]}")
             else:
                 st.error("Data tidak ditemukan.")
         
