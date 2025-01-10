@@ -70,7 +70,7 @@ with form4:
                 if Array_Buku.buku[index_buku][5] == 'Anda Sudah Mengambil Buku':
                     st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
                 else:
-                    Array_Buku.buku[index_buku][5] = 1 
+                    #Array_Buku.buku[index_buku][5] = 1 
                     Array_Buku.buku[index_buku][1] -= 1
                     st.success("Buku berhasil dipinjam.")
                
