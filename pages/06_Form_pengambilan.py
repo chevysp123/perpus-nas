@@ -71,7 +71,6 @@ with form4:
                     st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
                 else:
                     Array_Buku.buku[index_buku][5] = 1 
-                    st.success("Buku berhasil dipinjam.")
                     Array_Buku.buku[index_buku][1] -= 1
                     st.success("Buku berhasil dipinjam.")
                
