@@ -30,7 +30,7 @@ with form2:
         tglkembali = form2.date_input("Tanggal Deadline Pengembalian :")
         
         #Logika Perhitungan Denda
-        tglPinjam = data_peminjam[4]
+        tglPinjam = Array_Peminjam.peminjam[4]
         tglPinjam = datetime.datetime.strptime(tglPinjam, "%Y-%m-%d")
         tglKembali = datetime.datetime.strptime(tglkembali, "%Y-%m-%d")
         
@@ -41,25 +41,25 @@ with form2:
 
         if totalHari > 0:
             denda = 5000 * totalHari
-            
-        tglskg = datetime.datetime.now()
-        tglkembali = str(tglkembali)
-        tglWajib = tglkembali.split('-')
 
-        tglWajib[0] = int(tglWajib[0])
-        tglWajib[1] = int(tglWajib[1])
-        tglWajib[2] = int(tglWajib[2])
+        # tglskg = datetime.datetime.now()
+        # tglkembali = str(tglkembali)
+        # tglWajib = tglkembali.split('-')
+
+        # tglWajib[0] = int(tglWajib[0])
+        # tglWajib[1] = int(tglWajib[1])
+        # tglWajib[2] = int(tglWajib[2])
         
-        selisihTahun = tglskg.year - tglWajib[0]
-        selisihBulan = tglskg.month - tglWajib[1]
-        selisihTanggal = tglskg.day - tglWajib[2] 
+        # selisihTahun = tglskg.year - tglWajib[0]
+        # selisihBulan = tglskg.month - tglWajib[1]
+        # selisihTanggal = tglskg.day - tglWajib[2] 
 
-        totalHari = (selisihTahun*365 + selisihBulan*30 + selisihTanggal)
+        # totalHari = (selisihTahun*365 + selisihBulan*30 + selisihTanggal)
         
-        denda = 0
+        # denda = 0
 
-        if(totalHari>0):
-            denda = 5000 * totalHari
+        # if(totalHari>0):
+        #     denda = 5000 * totalHari
 
         #Menampilkan Hasil
         if submitted: 
