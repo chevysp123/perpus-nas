@@ -57,7 +57,8 @@ with form1:
                         judul,
                         tglpinjam.strftime("%Y-%m-%d"),
                         tglkembali.strftime("%Y-%m-%d"),
-                        '0'
+                        '0',
+                        index
                     ]
                 )
                 
