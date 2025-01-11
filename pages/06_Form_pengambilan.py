@@ -35,7 +35,7 @@ st.write("Silahkan Scan QR Code Peminjam")
 form3 = st.form(key="annotation1",clear_on_submit=False)
 with form3:
         submitted = st.form_submit_button(label="Scan QR Code", on_click=None)  
-        nama = form3.text_input("Scan QR Code :")
+        nama = form3.text_input("")
         # submitted = st.form_submit_button(label="Submit")
                      
         #Pengiriman Data
@@ -77,7 +77,7 @@ with form4:
                     Array_Buku.buku[index_buku][1] -= 1
                     st.success(Array_Peminjam.peminjam[index][5])
                     st.success("Buku berhasil dipinjam.")
-                    st.balloons()
+                    
 
 
 
