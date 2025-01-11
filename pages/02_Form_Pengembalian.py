@@ -82,7 +82,7 @@ with form2:
             #     st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
 
 
-form5 = st.form(key="annotation2", clear_on_submit=False)
+form5 = st.form(key="annotation3", clear_on_submit=False)
 with form5:
     submitted2 = st.form_submit_button(label="Serahkan Buku")
     if submitted2:
