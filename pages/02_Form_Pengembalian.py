@@ -123,7 +123,7 @@ with form5:
             if totalHari > 0:
                 denda = 5000 * totalHari
 
-                if(denda == 0):
+                if(denda = 0):
                     st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
                     st.balloons()
             else:
