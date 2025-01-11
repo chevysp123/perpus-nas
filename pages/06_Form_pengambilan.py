@@ -22,7 +22,6 @@ arynama,aryjudul,arytglpinjam,arytglkembali = [],[],[],[]
 #Elemen Halaman Streamlit
 st.empty()
 st.title("📖 Menu Pengambilan Buku ")
-st.write("Silahkan Scan QR Code Peminjam")
 
 # if st.button("pinjem Buku" ):
 #     buku[0][1] = buku[0][1] - 1
@@ -35,9 +34,7 @@ st.write("Silahkan Scan QR Code Peminjam")
 form3 = st.form(key="annotation1",clear_on_submit=False)
 with form3:
         submitted = st.form_submit_button(label="Scan QR Code", on_click=None)  
-        nama = form3.text_input("")
-        # submitted = st.form_submit_button(label="Submit")
-                     
+        nama = form3.text_input("Scan disini :")
         #Pengiriman Data
         if submitted:
             key = nama
