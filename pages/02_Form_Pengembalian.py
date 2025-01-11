@@ -27,7 +27,7 @@ with form2:
         submitted = st.form_submit_button(label="Scan QR Code", on_click=None)
         nama = form2.text_input("scan Disini :")
         # judul = form2.selectbox('Pilih Judul Buku',('','As A Man Thinketh by James Allen','The Metamorphosis by Franz Kafka','1984 by George Orwell','Manusia Setengan Salmon by Raditya Dika','Ubur Ubur Lembur by Raditya Dika','Sang Pemimpi by Andrea Hirata','The Little Prince by Antonie De Saint-Exupery','The Laws Of Human Nature by Robert Greene','The Art Of Being Alone by Renuka Gavrani','Steal Like An Artist by Austin Kleon'))
-        tglkembalidead = form2.date_input("Tanggal Deadline Pengembalian :")
+        #tglkembalidead = form2.date_input("Tanggal Deadline Pengembalian :")
         
         #Logika Perhitungan Denda
         key = nama
@@ -104,11 +104,31 @@ with form2:
 
 form5 = st.form(key="annotation3", clear_on_submit=False)
 with form5:
+    tglkembalidead = form5.date_input("Tanggal Deadline Pengembalian :")
     submitted2 = st.form_submit_button(label="Kembalikan Buku")
     if submitted2:
         if 'nama' not in locals() or not nama:
             st.error("Silakan scan QR Code terlebih dahulu.")
         else:
+               key = nama
+        if key in Array_Peminjam.key_peminjam:
+            index = Array_Peminjam.key_peminjam.index(key)
+            data_peminjam = Array_Peminjam.peminjam[index]
+            tglKembali = datetime.datetime.strptime(data_peminjam[4], "%Y-%m-%d").date()
+        
+            selisih = tglkembalidead - tglKembali
+            totalHari = selisih.days
+                
+            denda = 0
+            if totalHari > 0:
+                denda = 5000 * totalHari
+
+                if(denda == 0):
+                    st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
+                    st.balloons()
+            else:
+                st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
+
             id = str(nama.split(" - ")[0]) 
             buku = str(nama.split(" - ")[2])
             index = next((i for i, sublist in enumerate(Array_Peminjam.peminjam) if id in sublist), None)
