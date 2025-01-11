@@ -34,7 +34,7 @@ with form2:
         if key in Array_Peminjam.key_peminjam:
             index = Array_Peminjam.key_peminjam.index(key)
             data_peminjam = Array_Peminjam.peminjam[index]
-            tglKembali = data_peminjam[4]
+            tglKembali = datetime.datetime.strptime(data_peminjam[4], "%Y-%m-%d").date()
         
             selisih = tglkembalidead - tglKembali
             totalHari = selisih.days
