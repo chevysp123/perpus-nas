@@ -51,7 +51,7 @@ with form3:
                 st.write(f"Tanggal Pinjam: {data_peminjam[3]}")
                 st.write(f"Tanggal Kembali: {data_peminjam[4]}")
                 image_path = Array_Buku.buku[data_peminjam[6]][0]
-                image = Image.open(image_path)
+                image = Image.open(image_path, width=200)
                 st.image(image, caption=st.write(f"Tersedia: {Array_Buku.buku[data_peminjam[6]][1]}"), use_column_width=True, width=20)
             else:
                 st.error("Data tidak ditemukan.")
