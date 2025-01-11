@@ -34,6 +34,10 @@ with form1:
         tglpinjam = value=datetime.date.today()
         tglkembali = form1.date_input("Tanggal Kembali :")
         #aktif = form1=="0"
+        max_tglkembali = tglpinjam + datetime.timedelta(days=7)
+        if tglkembali > max_tglkembali:
+            st.error("Tanggal kembali tidak boleh lebih dari 7 hari dari tanggal pinjam.")
+            submitted = False
         submitted = st.form_submit_button(label="Submit")
         
         #Pengiriman Data
