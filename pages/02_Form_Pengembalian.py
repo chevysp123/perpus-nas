@@ -123,11 +123,11 @@ with form5:
             if totalHari > 0:
                 denda = 5000 * totalHari
 
-                if(denda = 0):
-                    st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
-                    st.balloons()
-            else:
-                st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
+            #     if(denda == 0):
+            #         st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
+            #         st.balloons()
+            # else:
+            #     st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
 
             id = str(nama.split(" - ")[0]) 
             buku = str(nama.split(" - ")[2])
@@ -140,7 +140,7 @@ with form5:
                 st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
                 st.balloons()
             else:
-                st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
+                st.error("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
 
             
             
