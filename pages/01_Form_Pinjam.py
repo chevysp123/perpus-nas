@@ -35,10 +35,8 @@ with form1:
         tglkembali = form1.date_input("Tanggal Kembali :")
         #aktif = form1=="0"
         max_tglkembali = tglpinjam + datetime.timedelta(days=7)
-        if tglkembali > max_tglkembali:
-            st.error("Tanggal kembali tidak boleh lebih dari 7 hari dari tanggal pinjam.")
-        else:
-            submitted = st.form_submit_button(label="Submit")
+        # if tglkembali > max_tglkembali:
+        #     st.error("Tanggal kembali tidak boleh lebih dari 7 hari dari tanggal pinjam.")
         submitted = st.form_submit_button(label="Submit")
         
         #Pengiriman Data
@@ -47,6 +45,8 @@ with form1:
             judul = str(judul.split(" - ")[1]) 
             if buku[index][1] == 0:
                 st.error("Maaf, Buku yang Anda Pilih Sedang Tidak Tersedia")
+            elif tglkembali > max_tglkembali:
+                st.error("Tanggal kembali tidak boleh lebih dari 7 hari dari tanggal pinjam.")
             else:
                 
                 #buku[index][1] = buku[index][1] - 1
