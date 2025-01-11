@@ -17,7 +17,7 @@ arynama,aryjudul,arytglpinjam,arytglkembali = [],[],[],[]
 #Elemen Halaman Streamlit
 st.empty()
 st.title("📄 Menu Pengembalian Buku")
-st.write("Silahkan Masukkan Data Diri Anda")
+# st.write("Silahkan Masukkan Data Diri Anda")
 
 #Input Form
 form2 = st.form(key="annotation2",clear_on_submit=True)
