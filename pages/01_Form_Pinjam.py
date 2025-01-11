@@ -39,7 +39,7 @@ with form1:
             st.error("Tanggal kembali tidak boleh lebih dari 7 hari dari tanggal pinjam.")
         else:
             submitted = st.form_submit_button(label="Submit")
-        # submitted = st.form_submit_button(label="Submit")
+        submitted = st.form_submit_button(label="Submit")
         
         #Pengiriman Data
         if submitted:
