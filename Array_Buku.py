@@ -1,5 +1,5 @@
 buku = [
-    [   'assets/image/1.jpg',
+    [   'assets/image/1a.jpg',
         3,
         "As A Man Thinketh: Buku karya James Allen ini menjelaskan bahwa pikiran manusia memiliki kekuatan besar dalam membentuk kehidupan. Dengan pola pikir yang positif dan terarah, seseorang dapat mencapai kesuksesan dan kebahagiaan.",
         'As A Man Thinketh by James Allen'
