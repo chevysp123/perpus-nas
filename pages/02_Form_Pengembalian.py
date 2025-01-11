@@ -6,6 +6,7 @@ import streamlit as st
 import Array_Peminjam
 import Array_Buku
 import importlib
+from PIL import Image
 
 #Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Menu Pengembalian Buku", page_icon="📄", layout="centered")
