@@ -26,11 +26,22 @@ with form2:
         #submitted = st.form_submit_button(label="Submit")
         submitted = st.form_submit_button(label="Scan QR Code", on_click=None)
         nama = form2.text_input("scan Disini :")
-        #nama = form2.selectbox('Pilih Peminjam',Array_Peminjam.key_peminjam)
         # judul = form2.selectbox('Pilih Judul Buku',('','As A Man Thinketh by James Allen','The Metamorphosis by Franz Kafka','1984 by George Orwell','Manusia Setengan Salmon by Raditya Dika','Ubur Ubur Lembur by Raditya Dika','Sang Pemimpi by Andrea Hirata','The Little Prince by Antonie De Saint-Exupery','The Laws Of Human Nature by Robert Greene','The Art Of Being Alone by Renuka Gavrani','Steal Like An Artist by Austin Kleon'))
         tglkembali = form2.date_input("Tanggal Deadline Pengembalian :")
         
         #Logika Perhitungan Denda
+        tglPinjam = data_peminjam[4]
+        tglPinjam = datetime.datetime.strptime(tglPinjam, "%Y-%m-%d")
+        tglKembali = datetime.datetime.strptime(tglkembali, "%Y-%m-%d")
+        
+        selisih = tglKembali - tglPinjam
+        totalHari = selisih.days
+        
+        denda = 0
+
+        if totalHari > 0:
+            denda = 5000 * totalHari
+            
         tglskg = datetime.datetime.now()
         tglkembali = str(tglkembali)
         tglWajib = tglkembali.split('-')
