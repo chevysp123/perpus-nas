@@ -30,24 +30,24 @@ with form2:
         #tglkembalidead = form2.date_input("Tanggal Deadline Pengembalian :")
         
         #Logika Perhitungan Denda
-        key = nama
-        if key in Array_Peminjam.key_peminjam:
-            index = Array_Peminjam.key_peminjam.index(key)
-            data_peminjam = Array_Peminjam.peminjam[index]
-            tglKembali = datetime.datetime.strptime(data_peminjam[4], "%Y-%m-%d").date()
+        # key = nama
+        # if key in Array_Peminjam.key_peminjam:
+        #     index = Array_Peminjam.key_peminjam.index(key)
+        #     data_peminjam = Array_Peminjam.peminjam[index]
+        #     tglKembali = datetime.datetime.strptime(data_peminjam[4], "%Y-%m-%d").date()
         
-            selisih = tglkembalidead - tglKembali
-            totalHari = selisih.days
+        #     selisih = tglkembalidead - tglKembali
+        #     totalHari = selisih.days
                 
-            denda = 0
-            if totalHari > 0:
-                denda = 5000 * totalHari
+        #     denda = 0
+        #     if totalHari > 0:
+        #         denda = 5000 * totalHari
 
-                if(denda == 0):
-                    st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
-                    st.balloons()
-            else:
-                st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
+        #         if(denda == 0):
+        #             st.success("Terimakasih sudah mengembalikan buku tepat pada waktunya!")
+        #             st.balloons()
+        #     else:
+        #         st.success("Anda terlambat mengembalikan buku sebanyak "+ str(totalHari) +" hari, maka harap membayar denda sebesar "+ str(denda) +" rupiah")
 
             
 
